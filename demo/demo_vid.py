@@ -61,7 +61,7 @@ def main():
     # build the model from a config file and a checkpoint file
     model = init_model(args.config, args.checkpoint, device=args.device)
 
-    prog_bar = mmcv.ProgressBar(len(imgs))
+    prog_bar = mmcv.ProgressBar(10000000) #len(imgs))
     # test and show/save the images
     for i, img in enumerate(imgs):
         if isinstance(img, str):
