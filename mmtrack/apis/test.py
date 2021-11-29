@@ -63,7 +63,10 @@ def single_gpu_test(model,
                 out_file = osp.join(out_dir, img_meta['ori_filename'])
             else:
                 out_file = None
-
+                
+            # TODO: Append results to file
+            print(result)
+                
             model.module.show_result(
                 img_show,
                 result,
@@ -91,7 +94,6 @@ def single_gpu_test(model,
                 prev_start_frame_id = int(prev_img_names[0].split('.')[0])
                 prev_end_frame_id = int(prev_img_names[-1].split('.')[0])
 
-                # TODO
                 mmcv.frames2video(
                     prev_img_dirs,
                     f'{prev_img_dirs}/out_video.mp4',
