@@ -7,3 +7,6 @@ Multiple object tracking (MOT)
 Sample video every second, add bounding box annotation 
 
 Ignore detections in the amb parking lot
+
+
+REID only uses the FRCNN folder
